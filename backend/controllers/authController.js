@@ -26,6 +26,7 @@ exports.registerUser = async (req, res) => {
             email,
             password,
             profileImageURL,
+            hasPaid: false,
         });
         res.status(201).json({
             _id: user._id,

@@ -5,7 +5,11 @@ export const UserContext = createContext();
 const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const updateUser = (userData) => {
-        setUser(userData);
+        // Ensure hasPaid is always present
+        setUser({
+            ...userData,
+            hasPaid: userData.hasPaid !== undefined ? userData.hasPaid : false,
+        });
     };
     const clearUser = () => {
         setUser(null);

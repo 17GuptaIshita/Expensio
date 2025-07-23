@@ -9,6 +9,7 @@ const fs = require('fs');
 const incomeRoutes = require("./routes/incomeRoutes");
 const expenseRoutes = require("./routes/expenseRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
 
 
 //middleware to handle cors
@@ -25,10 +26,12 @@ app.use(express.json());
 
 connectDB();
 
+
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/income",incomeRoutes);
 app.use("/api/v1/expense", expenseRoutes);
 app.use("/api/v1/dashboard", dashboardRoutes);
+app.use("/api/v1/payment", paymentRoutes);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 

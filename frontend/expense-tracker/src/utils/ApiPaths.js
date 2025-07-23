@@ -25,6 +25,10 @@ EXPENSE:{
 IMAGE:{
     UPLOAD_IMAGE: `/api/v1/image/upload-image`,
 },
+    PAYMENT: {
+      CREATE_ORDER: `/api/v1/payment/create-order`,
+      UPDATE_PAYMENT_STATUS: `/api/v1/payment/update-payment-status`,
+    },
 }
 
 export default API_PATHS;

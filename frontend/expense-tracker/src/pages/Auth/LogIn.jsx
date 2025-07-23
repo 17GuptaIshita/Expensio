@@ -38,7 +38,7 @@ const Login = () => {
     });
     const {token , user } = response.data;
     if(token) {
-      updateUser(user);
+      updateUser({ ...user, hasPaid: user.hasPaid !== undefined ? user.hasPaid : false });
       localStorage.setItem("token",token);
       navigate("/dashboard");
     }
