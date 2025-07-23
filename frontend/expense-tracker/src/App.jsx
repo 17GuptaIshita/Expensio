@@ -13,6 +13,8 @@ import LogIn from './pages/Auth/LogIn';
 import SignUp from './pages/Auth/SignUp';
 import LandingPage from './pages/LandingPage';
 import UserProvider from './context/UserContext';
+import PrivacyPolicy from './components/PolicyLinks/PrivacyPolicy';
+import TermsAndCondition from './components/PolicyLinks/Terms-and-condition';
 
 const App = () => {
     return (
@@ -27,11 +29,11 @@ const App = () => {
           <Route path="/login" exact element={<LogIn />} />
           <Route path="/signup" exact element={<SignUp />} />
           <Route path="/dashboard" exact element={<Home />} />
-          <Route path="/privacy" element={<div style={{padding:'2rem',textAlign:'center'}}>Privacy Policy Page</div>} />
-          <Route path="/termsandconditions" element={<div style={{padding:'2rem',textAlign:'center'}}>Terms & Conditions Page</div>} />
-          <Route path="/refunds" element={<div style={{padding:'2rem',textAlign:'center'}}>Cancellation & Refunds Page</div>} />
+          <Route path="/privacy" exact element={<PrivacyPolicy />} />
+          <Route path="/termsandconditions" exact element={<TermsAndCondition />} />
+          <Route path="/refunds" exact element={<Cancellation />} />
           <Route path="/shipping" element={<div style={{padding:'2rem',textAlign:'center'}}>Shipping Policy Page</div>} />
-          <Route path="/contactus" element={<div style={{padding:'2rem',textAlign:'center'}}>Contact Us Page</div>} />
+          <Route path="/contact" element={<div style={{padding:'2rem',textAlign:'center'}}>Contact Us Page</div>} />
         </Routes>
       </Router>
     </div>

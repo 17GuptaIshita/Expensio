@@ -116,7 +116,7 @@ const LandingPage = () => {
           <Link to="/termsandconditions" className="hover:underline mb-1">Terms & Conditions</Link>
           <Link to="/refunds" className="hover:underline mb-1">Cancellation & Refunds</Link>
           <Link to="/shipping" className="hover:underline mb-1">Shipping Policy</Link>
-          <Link to="/contactus" className="hover:underline mb-1">Contact Us</Link>
+          <Link to="/contact" className="hover:underline mb-1">Contact Us</Link>
         </div>
         {/* Contact Info - Right Side */}
         <div className="flex flex-col items-end pr-6 text-right">
