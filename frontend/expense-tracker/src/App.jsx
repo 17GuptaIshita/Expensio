@@ -15,6 +15,10 @@ import LandingPage from './pages/LandingPage';
 import UserProvider from './context/UserContext';
 import PrivacyPolicy from './components/PolicyLinks/PrivacyPolicy';
 import TermsAndCondition from './components/PolicyLinks/Terms-and-condition';
+import Cancellation from './components/PolicyLinks/Cancellation';
+import Shipping from './components/PolicyLinks/Shipping';
+import Contact from './components/PolicyLinks/Contact';
+
 
 const App = () => {
     return (
@@ -32,8 +36,8 @@ const App = () => {
           <Route path="/privacy" exact element={<PrivacyPolicy />} />
           <Route path="/termsandconditions" exact element={<TermsAndCondition />} />
           <Route path="/refunds" exact element={<Cancellation />} />
-          <Route path="/shipping" element={<div style={{padding:'2rem',textAlign:'center'}}>Shipping Policy Page</div>} />
-          <Route path="/contact" element={<div style={{padding:'2rem',textAlign:'center'}}>Contact Us Page</div>} />
+          <Route path="/shipping" exact element={<Shipping />} />
+          <Route path="/contact" exact element={<Contact/>}/>
         </Routes>
       </Router>
     </div>
