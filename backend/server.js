@@ -13,12 +13,12 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 
 //middleware to handle cors
 app.use(
-    cors({
-        origin: process.env.CLIENT_URL || "*",
-        credentials: true,
-        methods: ["GET","POST","PUT","DELETE"],
-        allowedHeaders: ["Content-Type","Authorization"],
-    })
+  cors({
+    origin: "https://expensio-git-main-ishita-gupta.vercel.app", 
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
 );
 
 app.use(express.json());
