@@ -28,10 +28,10 @@ const App = () => {
           <Route path="/signup" exact element={<SignUp />} />
           <Route path="/dashboard" exact element={<Home />} />
           <Route path="/privacy" element={<div style={{padding:'2rem',textAlign:'center'}}>Privacy Policy Page</div>} />
-          <Route path="/terms" element={<div style={{padding:'2rem',textAlign:'center'}}>Terms & Conditions Page</div>} />
+          <Route path="/termsandconditions" element={<div style={{padding:'2rem',textAlign:'center'}}>Terms & Conditions Page</div>} />
           <Route path="/refunds" element={<div style={{padding:'2rem',textAlign:'center'}}>Cancellation & Refunds Page</div>} />
           <Route path="/shipping" element={<div style={{padding:'2rem',textAlign:'center'}}>Shipping Policy Page</div>} />
-          <Route path="/contact" element={<div style={{padding:'2rem',textAlign:'center'}}>Contact Us Page</div>} />
+          <Route path="/contactus" element={<div style={{padding:'2rem',textAlign:'center'}}>Contact Us Page</div>} />
         </Routes>
       </Router>
     </div>
