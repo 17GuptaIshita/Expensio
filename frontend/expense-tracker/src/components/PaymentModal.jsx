@@ -58,6 +58,20 @@ const PaymentModal = ({ onPay, onClose }) => {
       <div className="bg-white rounded-xl shadow-lg p-8 max-w-md w-full text-center">
         <h2 className="text-2xl font-bold mb-4 text-primary">Complete Your Payment</h2>
         <p className="text-gray-700 mb-6">To unlock all features, please complete the one-time payment of <span className="font-semibold">₹199</span>.</p>
+        <div className="mb-6 text-left">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">Unlock these features:</h3>
+          <ul className="list-disc pl-6 text-gray-700 text-base">
+            <li>Heatmap of your transactions</li>
+            <li>Real-time financial analysis</li>
+            <li>Interactive line charts</li>
+            <li>Pie charts for category breakdown</li>
+            <li>Recent transactions overview</li>
+            <li>Income and expense tracking</li>
+            <li>Downloadable reports</li>
+            <li>Profile photo and personalization</li>
+            <li>Secure data storage</li>
+          </ul>
+        </div>
         <button
           className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg mb-2"
           onClick={handleRazorpay}
