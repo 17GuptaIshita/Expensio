@@ -14,7 +14,7 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 //middleware to handle cors
 app.use(
   cors({
-    origin: "https://expensio-ishita-gupta.vercel.app/", 
+    origin: "https://expensio-ishita-gupta.vercel.app", 
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
