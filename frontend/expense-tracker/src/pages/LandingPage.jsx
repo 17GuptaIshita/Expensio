@@ -108,48 +108,40 @@ const LandingPage = () => {
 
 
     {/* Footer Section */}
-    <footer className="w-full bg-violet-50 border-t border-gray-200 py-6 flex flex-row items-start justify-between mt-0">
-      {/* Policy Links - Left Side, stacked vertically */}
-      <div className="flex flex-col items-start pl-6 text-sm text-gray-600">
-        <span className="font-semibold text-black mb-2">Policy Links:</span>
-        <Link to="/privacy" className="hover:underline mb-1">Privacy Policy</Link>
-        <Link to="/terms" className="hover:underline mb-1">Terms & Conditions</Link>
-        <Link to="/refunds" className="hover:underline mb-1">Cancellation & Refunds</Link>
-        <Link to="/shipping" className="hover:underline mb-1">Shipping Policy</Link>
-        <Link to="/contact" className="hover:underline mb-1">Contact Us</Link>
-      </div>
-      {/* Contact Info - Right Side */}
-      <div className="flex flex-col items-end pr-6 text-right">
-        <div className="text-lg font-semibold text-black mb-1">Thanks for Visiting – Say Hello!</div>
-        <div className="text-gray-600 mb-1">Ishita Gupta | India</div>
-        <div className="text-gray-600 mb-1">Phone: +91-9893446144</div>
-        <div className="flex gap-4 justify-end text-primary text-lg mb-1">
-          <a href="https://github.com/17GuptaIshita" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline">
-            <LuGithub size={20} />
-          </a>
-          <a href="https://www.linkedin.com/in/ishitagupta79/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline">
-            <LuLinkedin size={20} />
-          </a>
-          <a href="mailto:ishitagupta0458@email.com" className="flex items-center gap-1 hover:underline">
-            <LuMail size={20} />
-          </a>
+    <footer className="w-full bg-violet-50 border-t border-gray-200 py-6 flex flex-col items-start mt-0">
+      <div className="w-full flex flex-row items-start justify-between">
+        {/* Policy Links - Left Side, stacked vertically */}
+        <div className="flex flex-col items-start pl-6 text-sm text-gray-600">
+          <Link to="/privacy" className="hover:underline mb-1">Privacy Policy</Link>
+          <Link to="/terms" className="hover:underline mb-1">Terms & Conditions</Link>
+          <Link to="/refunds" className="hover:underline mb-1">Cancellation & Refunds</Link>
+          <Link to="/shipping" className="hover:underline mb-1">Shipping Policy</Link>
+          <Link to="/contact" className="hover:underline mb-1">Contact Us</Link>
+        </div>
+        {/* Contact Info - Right Side */}
+        <div className="flex flex-col items-end pr-6 text-right">
+          <div className="text-lg font-semibold text-black mb-1">Thanks for Visiting – Say Hello!</div>
+          <div className="text-gray-600 mb-1">Ishita Gupta | India</div>
+          <div className="text-gray-600 mb-1">Phone: +91-9893446144</div>
+          <div className="flex gap-4 justify-end text-primary text-lg mb-1">
+            <a href="https://github.com/17GuptaIshita" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline">
+              <LuGithub size={20} />
+            </a>
+            <a href="https://www.linkedin.com/in/ishitagupta79/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline">
+              <LuLinkedin size={20} />
+            </a>
+            <a href="mailto:ishitagupta0458@email.com" className="flex items-center gap-1 hover:underline">
+              <LuMail size={20} />
+            </a>
+          </div>
         </div>
       </div>
       {/* Centered All Rights Reserved */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-2 text-xs text-gray-400 border-t border-gray-200 pt-2 w-fit text-center">All Rights Reserved</div>
+      <div className="w-full text-center text-xs text-gray-400 border-t border-gray-200 pt-2 mt-4">All Rights Reserved</div>
     </footer>
     </div>
   );
 };
 
-// Add this CSS to your global styles or in a <style> tag:
-/*
-.animate-blink {
-  animation: blink 1s steps(2, start) infinite;
-}
-@keyframes blink {
-  to { opacity: 0; }
-}
-*/
 
 export default LandingPage;
