@@ -9,8 +9,8 @@ import { Toaster } from 'react-hot-toast';
 import Home from './pages/Dashboard/Home';
 import Income from './pages/Dashboard/Income';
 import Expense from './pages/Dashboard/Expense';
-import LogIn from './pages/Auth/Login';
-import SignUp from './pages/Auth/Signup';
+import LogIn from './pages/Auth/LogIn';
+import SignUp from './pages/Auth/SignUp';
 import LandingPage from './pages/LandingPage';
 import UserProvider from './context/UserContext';
 
