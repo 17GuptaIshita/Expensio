@@ -125,6 +125,14 @@ const LandingPage = () => {
       </div>
       <div className="text-xs text-gray-400 mt-4 border-t border-gray-200 pt-2 w-full text-center">All Rights Reserved</div>
     </footer>
+    <footer style={{marginTop:'3rem',textAlign:'center',fontSize:'14px'}}>
+  <span>Policy Links: </span>
+  <Link to="/privacy" style={{margin:'0 8px'}}>Privacy Policy</Link>
+  <Link to="/terms" style={{margin:'0 8px'}}>Terms & Conditions</Link>
+  <Link to="/refunds" style={{margin:'0 8px'}}>Cancellation & Refunds</Link>
+  <Link to="/shipping" style={{margin:'0 8px'}}>Shipping Policy</Link>
+  <Link to="/contact" style={{margin:'0 8px'}}>Contact Us</Link>
+</footer>
     </div>
   );
 };
