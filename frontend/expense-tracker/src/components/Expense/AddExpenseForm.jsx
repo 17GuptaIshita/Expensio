@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Input from '../Inputs/Input'
 import EmojiPickerPopup from '../EmojiPickerPopup'
-import { data } from 'react-router-dom'
 
 
 const AddExpenseForm = ({onAddExpense}) => {
