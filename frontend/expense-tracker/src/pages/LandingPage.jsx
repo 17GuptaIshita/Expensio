@@ -108,15 +108,15 @@ const LandingPage = () => {
 
 
     {/* Footer Section */}
-    <footer className="w-full bg-violet-50 border-t border-gray-200 py-6 flex flex-row items-center justify-between text-center mt-0">
-      {/* Policy Links - Left Side */}
-      <div className="flex flex-row flex-wrap gap-2 items-center justify-start text-sm text-gray-600 pl-6">
-        <span className="font-semibold text-black mr-2">Policy Links:</span>
-        <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
-        <Link to="/terms" className="hover:underline">Terms & Conditions</Link>
-        <Link to="/refunds" className="hover:underline">Cancellation & Refunds</Link>
-        <Link to="/shipping" className="hover:underline">Shipping Policy</Link>
-        <Link to="/contact" className="hover:underline">Contact Us</Link>
+    <footer className="w-full bg-violet-50 border-t border-gray-200 py-6 flex flex-row items-start justify-between mt-0">
+      {/* Policy Links - Left Side, stacked vertically */}
+      <div className="flex flex-col items-start pl-6 text-sm text-gray-600">
+        <span className="font-semibold text-black mb-2">Policy Links:</span>
+        <Link to="/privacy" className="hover:underline mb-1">Privacy Policy</Link>
+        <Link to="/terms" className="hover:underline mb-1">Terms & Conditions</Link>
+        <Link to="/refunds" className="hover:underline mb-1">Cancellation & Refunds</Link>
+        <Link to="/shipping" className="hover:underline mb-1">Shipping Policy</Link>
+        <Link to="/contact" className="hover:underline mb-1">Contact Us</Link>
       </div>
       {/* Contact Info - Right Side */}
       <div className="flex flex-col items-end pr-6 text-right">
@@ -134,8 +134,9 @@ const LandingPage = () => {
             <LuMail size={20} />
           </a>
         </div>
-        <div className="text-xs text-gray-400 mt-2 border-t border-gray-200 pt-2 w-full">All Rights Reserved</div>
       </div>
+      {/* Centered All Rights Reserved */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-2 text-xs text-gray-400 border-t border-gray-200 pt-2 w-fit text-center">All Rights Reserved</div>
     </footer>
     </div>
   );
