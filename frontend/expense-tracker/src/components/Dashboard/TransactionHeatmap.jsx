@@ -94,15 +94,15 @@ const TransactionHeatmap = ({ transactions = [] }) => {
               {weeks.map((week, weekIdx) => (
                 <div key={weekIdx} className="flex flex-col gap-[2px]">
                   {week.map((day, dayIdx) => {
-                    if (!day) return <div key={dayIdx} style={{ width: 16, height: 16, background: 'transparent' }} />;
+                    if (!day) return <div key={dayIdx} style={{ width: 13, height: 13, background: 'transparent' }} />;
                     const d = data.find(x => x.date === day.format('YYYY-MM-DD'));
                     return (
                       <div
                         key={dayIdx}
                         title={`${day.format('MMM DD, YYYY')}: ${d.count} transaction${d.count !== 1 ? 's' : ''}`}
                         style={{
-                          width: 16,
-                          height: 16,
+                          width: 13,
+                          height: 13,
                           background: getColor(d.count),
                           borderRadius: 3,
                           border: '1px solid #e5e7eb',
