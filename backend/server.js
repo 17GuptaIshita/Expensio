@@ -35,6 +35,10 @@ app.get("/healthcheck",(req, res) => {
     res.status(200).json({ message: "Server is healthy" });
 });
 
+app.get("/", (req, res) => {
+    res.send("Expensio backend is live!");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
