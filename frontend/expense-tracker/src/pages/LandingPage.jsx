@@ -108,31 +108,35 @@ const LandingPage = () => {
 
 
     {/* Footer Section */}
-    <footer className="w-full bg-violet-50 border-t border-gray-200 py-6 flex flex-col items-center text-center mt-0">
-      <div className="text-lg font-semibold text-black mb-1">Thanks for Visiting – Say Hello!</div>
-        <div className="text-gray-600 mb-2">Ishita Gupta | India</div>
-      <div className="text-gray-600 mb-2">Phone: +91-9893446144</div>
-      <div className="flex gap-6 justify-center text-primary text-lg">
-        <a href="https://github.com/17GuptaIshita" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline">
-          <LuGithub size={20} /> 
-        </a>
-        <a href="https://www.linkedin.com/in/ishitagupta79/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline">
-          <LuLinkedin size={20} /> 
-        </a>
-        <a href="mailto:ishitagupta0458@email.com" className="flex items-center gap-1 hover:underline">
-          <LuMail size={20} /> 
-        </a>
+    <footer className="w-full bg-violet-50 border-t border-gray-200 py-6 flex flex-row items-center justify-between text-center mt-0">
+      {/* Policy Links - Left Side */}
+      <div className="flex flex-row flex-wrap gap-2 items-center justify-start text-sm text-gray-600 pl-6">
+        <span className="font-semibold text-black mr-2">Policy Links:</span>
+        <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
+        <Link to="/terms" className="hover:underline">Terms & Conditions</Link>
+        <Link to="/refunds" className="hover:underline">Cancellation & Refunds</Link>
+        <Link to="/shipping" className="hover:underline">Shipping Policy</Link>
+        <Link to="/contact" className="hover:underline">Contact Us</Link>
       </div>
-      <div className="text-xs text-gray-400 mt-4 border-t border-gray-200 pt-2 w-full text-center">All Rights Reserved</div>
+      {/* Contact Info - Right Side */}
+      <div className="flex flex-col items-end pr-6 text-right">
+        <div className="text-lg font-semibold text-black mb-1">Thanks for Visiting – Say Hello!</div>
+        <div className="text-gray-600 mb-1">Ishita Gupta | India</div>
+        <div className="text-gray-600 mb-1">Phone: +91-9893446144</div>
+        <div className="flex gap-4 justify-end text-primary text-lg mb-1">
+          <a href="https://github.com/17GuptaIshita" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline">
+            <LuGithub size={20} />
+          </a>
+          <a href="https://www.linkedin.com/in/ishitagupta79/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline">
+            <LuLinkedin size={20} />
+          </a>
+          <a href="mailto:ishitagupta0458@email.com" className="flex items-center gap-1 hover:underline">
+            <LuMail size={20} />
+          </a>
+        </div>
+        <div className="text-xs text-gray-400 mt-2 border-t border-gray-200 pt-2 w-full">All Rights Reserved</div>
+      </div>
     </footer>
-    <footer style={{marginTop:'3rem',textAlign:'center',fontSize:'14px'}}>
-  <span>Policy Links: </span>
-  <Link to="/privacy" style={{margin:'0 8px'}}>Privacy Policy</Link>
-  <Link to="/terms" style={{margin:'0 8px'}}>Terms & Conditions</Link>
-  <Link to="/refunds" style={{margin:'0 8px'}}>Cancellation & Refunds</Link>
-  <Link to="/shipping" style={{margin:'0 8px'}}>Shipping Policy</Link>
-  <Link to="/contact" style={{margin:'0 8px'}}>Contact Us</Link>
-</footer>
     </div>
   );
 };
