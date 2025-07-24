@@ -7,7 +7,15 @@ import { prepareIncomeBarChartData } from '../../utils/Helper'
 const IncomeOverview = ({ transactions, onAddIncome }) => {
   const [charData, setCharData] = useState([])
   useEffect(() => {
-    const result = prepareIncomeBarChartData ? prepareIncomeBarChartData(transactions) : [];
+    // Filter transactions for the past 60 days
+    const today = new Date();
+    const sixtyDaysAgo = new Date(today);
+    sixtyDaysAgo.setDate(today.getDate() - 60);
+    const filtered = transactions.filter(tx => {
+      const txDate = new Date(tx.date);
+      return txDate >= sixtyDaysAgo && txDate <= today;
+    });
+    const result = prepareIncomeBarChartData ? prepareIncomeBarChartData(filtered) : [];
     setCharData(result)
   }, [transactions])
 

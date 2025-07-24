@@ -16,13 +16,8 @@ const CustomLineChart = ({data}) => {
             const data = payload[0].payload;
             return (
                 <div className='bg-white shadow-md rounded-lg p-2 border border-gray-300 '>
-                    <p className='text-xs font-semibold text-purple-800 mb-1'>{data.category}</p>
-                    {Array.isArray(data.categories) && data.categories.length === 1 && (
-                        <p className='text-xs text-gray-500 mb-1'>Category: Single</p>
-                    )}
-                    {Array.isArray(data.categories) && data.categories.length > 1 && (
-                        <p className='text-xs text-gray-500 mb-1'>Category: Multiple</p>
-                    )}
+                    <p className='text-xs font-semibold text-purple-800 mb-1'>Category: {data.category}</p>
+                    <p className='text-xs text-gray-500 mb-1'>Date: {data.date}</p>
                     <p className='text-sm text-gray-600'>
                         Amount: <span className='text-sm font-medium text-gray-900'>₹ {data.amount}</span>
                     </p>
@@ -50,7 +45,7 @@ const CustomLineChart = ({data}) => {
               </linearGradient>
             </defs>
             <CartesianGrid stroke="none" />
-            <XAxis dataKey="category" tick={false} axisLine={false} stroke="none" />
+            <XAxis dataKey="date" tick={{fontSize:12, fill:'#555'}} axisLine={false} stroke="none" />
             <YAxis tick={{fontSize:12, fill:"#555"}} stroke="none" />
             <Tooltip content={CustomTooltip} />
             <Area

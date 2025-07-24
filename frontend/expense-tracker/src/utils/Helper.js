@@ -71,21 +71,10 @@ export const prepareIncomeBarChartData = (data=[]) => {
 }
 
 export const prepareExpenseLineChartData = (data = []) => {
-  // Group by formatted date and sum amounts, collect categories
-  const grouped = {};
-  data.forEach(item => {
-    const dateKey = moment(item.date).format('DD MMM');
-    if (!grouped[dateKey]) {
-      grouped[dateKey] = { amount: 0, categories: [] };
-    }
-    grouped[dateKey].amount += Number(item.amount);
-    if (item.category) grouped[dateKey].categories.push(item.category);
-  });
-
-  // Convert to array and sort by date ascending
-  const chartData = Object.entries(grouped)
-    .map(([category, { amount, categories }]) => ({ category, amount, categories }))
-    .sort((a, b) => moment(a.category, 'DD MMM').toDate() - moment(b.category, 'DD MMM').toDate());
-
-  return chartData;
+  // Return each expense as a separate entry with formatted date
+  return data.map(item => ({
+    category: item.category,
+    amount: Number(item.amount),
+    date: moment(item.date).format('DD MMM')
+  }));
 };
