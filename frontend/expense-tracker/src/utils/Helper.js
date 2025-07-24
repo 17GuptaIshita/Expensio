@@ -65,16 +65,17 @@ export const prepareIncomeBarChartData = (data=[]) => {
   const chartData = Object.entries(grouped)
     .map(([category, { amount, sources }]) => ({ category, amount, sources }))
     .sort((a, b) => moment(a.category, 'DD-MMM').toDate() - moment(b.category, 'DD-MMM').toDate());
-
-  console.log('Income Bar Chart Data:', chartData);
   return chartData;
 }
 
 export const prepareExpenseLineChartData = (data = []) => {
-  // Return each expense as a separate entry with formatted date
-  return data.map(item => ({
-    category: item.category,
-    amount: Number(item.amount),
-    date: moment(item.date).format('DD MMM')
-  }));
+  return data
+    .map(item => ({
+      category: item.category,
+      amount: Number(item.amount),
+      date: moment(item.date).format('DD MMM'),
+      rawDate: moment(item.date).toDate() 
+    }))
+    .sort((a, b) => a.rawDate - b.rawDate)
+    .map(({ rawDate, ...rest }) => rest); 
 };

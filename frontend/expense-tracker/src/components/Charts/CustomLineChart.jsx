@@ -45,7 +45,6 @@ const CustomLineChart = ({data}) => {
               </linearGradient>
             </defs>
             <CartesianGrid stroke="none" />
-            <XAxis dataKey="date" tick={{fontSize:12, fill:'#555'}} axisLine={false} stroke="none" />
             <YAxis tick={{fontSize:12, fill:"#555"}} stroke="none" />
             <Tooltip content={CustomTooltip} />
             <Area
